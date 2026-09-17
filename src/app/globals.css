@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0c10;
+  --bg-elevated: #12151c;
+  --main: #e2e6ef;
+  --sub: #5a6270;
+  --accent: #4ade80;
+  --accent-dim: #22c55e;
+  --error: #f87171;
+  --correct: #4ade80;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-main: var(--main);
+  --color-sub: var(--sub);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-error: var(--error);
+  --color-correct: var(--correct);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(74, 222, 128, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(74, 222, 128, 0.04), transparent);
+  color: var(--main);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sub);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dim);
+}
